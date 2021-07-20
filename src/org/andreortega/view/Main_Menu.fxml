@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="rootPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-size: contain; -fx-background-color: #112046;" stylesheets="@../css/main_menu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andreortega.controller.Main_MenuController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="267.0" style="-fx-background-color: #1a3656;">
+         <children>
+            <VBox layoutX="-5.0" layoutY="273.0" prefHeight="349.0" prefWidth="274.0">
+               <children>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#ventanaEmpresas" prefHeight="58.0" prefWidth="276.0" styleClass="boton" text="  Empresas" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-menú-principal-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" onAction="#ventanaPresupuesto" prefHeight="58.0" prefWidth="352.0" style="-fx-background-radius: 0 30 30 0;" styleClass="boton" text="  Presupuesto" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-contabilidad-de-fondos-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="15.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#ventanaServicios" prefHeight="58.0" prefWidth="297.0" style="-fx-background-radius: 0 30 30 0;" styleClass="boton" text="  Servicios" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-tiempo-de-dinero-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="22.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#ventanaPlatos" prefHeight="58.0" prefWidth="275.0" styleClass="boton" stylesheets="@../css/main_menu.css" text="Platos" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-comida-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="butomprueba" alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="23.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#ventanaEmpleados" prefHeight="58.0" prefWidth="281.0" stylesheets="@../css/main_menu.css" text="Empleados" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-antecedentes-grupo-seleccionado-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="20.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#ventanaProductos" prefHeight="58.0" prefWidth="314.0" ripplerFill="WHITE" style="-fx-background-radius: 0 30 30 0;" text="Productos" textFill="WHITE">
+                     <font>
+                        <Font name="Monotype Corsiva" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-comida-para-llevar-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="183.0" fitWidth="189.0" layoutX="39.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/PRUEBA.JPG.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="999.0" prefHeight="58.0" prefWidth="253.0">
+         <children>
+            <JFXButton fx:id="mini" buttonType="RAISED" layoutX="204.0" layoutY="8.0" onAction="#minimizar" prefHeight="27.0" prefWidth="27.0" style="-fx-background-radius: 100;" styleClass="menos" stylesheets="@../css/main_menu.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+        <JFXButton fx:id="btlogin" buttonType="RAISED" layoutX="166.0" layoutY="8.0" onAction="#ventanaprueba" prefHeight="27.0" prefWidth="27.0" style="-fx-background-radius: 100;" styleClass="maxi" stylesheets="@../css/main_menu.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Button fx:id="exit" layoutX="240.0" layoutY="8.0" mnemonicParsing="false" onAction="#exitprog" prefHeight="27.0" prefWidth="27.0" style="-fx-background-radius: 100;" styleClass="barra" stylesheets="@../css/main_menu.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="111.0" fitWidth="337.0" layoutX="285.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/R.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="899.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="132.0" fitWidth="132.0" layoutX="1118.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 90;">
+         <image>
+            <Image url="@../img/icons8-cuadrado-redondeado-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="132.0" fitWidth="132.0" layoutX="947.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-cuadrado-redondeado-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="134.0" fitWidth="132.0" layoutX="775.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 270;">
+         <image>
+            <Image url="@../img/icons8-cuadrado-redondeado-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="98.0" layoutX="792.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-antecedentes-grupo-seleccionado-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="98.0" layoutX="1135.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-menú-principal-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="104.0" layoutX="964.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-comida-100.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="810.0" layoutY="620.0" prefHeight="48.0" prefWidth="63.0" text="5" textFill="WHITE">
+         <font>
+            <Font name="Cambria Math" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="982.0" layoutY="620.0" prefHeight="48.0" prefWidth="63.0" text="10" textFill="WHITE">
+         <font>
+            <Font name="Cambria Math" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1153.0" layoutY="620.0" prefHeight="48.0" prefWidth="63.0" text="23" textFill="WHITE">
+         <font>
+            <Font name="Cambria Math" size="48.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="988.0" layoutY="396.0" onAction="#ventanaServicioshasPlatos" prefHeight="58.0" prefWidth="309.0" styleClass="button1" text="Servicios y Platos" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-comida-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="988.0" layoutY="331.0" onAction="#ventanaProductos_has_Platos" prefHeight="58.0" prefWidth="309.0" style="-fx-background-radius: 30 0 0 30;" styleClass="button1" text="Productos y Platos" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-comida-para-llevar-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" buttonType="RAISED" graphicTextGap="10.0" layoutX="988.0" layoutY="264.0" onAction="#ventanaServicioshasEmpleados" prefHeight="58.0" prefWidth="309.0" style="-fx-background-radius: 30 0 0 30;" styleClass="button1" text="Servicios y Empleados" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-tiempo-de-dinero-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

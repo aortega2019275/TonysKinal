@@ -1,0 +1,51 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #2653af;
+} 
+.textfill {
+    -fx-text-fill: #ffffff;
+}
+
+.tipoemp{
+    -fx-background-image: url(/org/andreortega/img/anadir.png);
+    -fx-background-color: transparent;
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    
+}
+.tipoemp:hover{
+    -fx-background-image: url(/org/andreortega/img/mas.png);
+    -fx-background-color: transparent;
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    
+    
+}
+
+.combo-box{
+    -fx-background-radius: 5;
+    -fx-background-color:  #2653af;
+   
+}
+.combo-box .list-cell{
+    -fx-text-fill: #ffffff;
+    -fx-background-color:   #2653af;
+
+    
+}
+
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-base .arrow {
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-effect: null;
+}

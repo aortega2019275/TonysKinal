@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#loginPane {
+    
+    -fx-background-color: #F3E4CE ;  
+        
+}
+.button{
+    -fx-background-color: #C05850;
+       
+}
+.exis{
+    -fx-background-image: url(/org/andreortega/img/firmar_1.png);
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+}
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #112046;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andreortega.controller.ServiciosController">
+    <stylesheets>
+        <URL value="@/org/andreortega/css/servicios.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: #1a3656;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="1211.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-tiempo-de-dinero-100.png" />
+               </image>
+            </ImageView>
+            <Label graphicTextGap="40.0" layoutX="974.0" prefHeight="75.0" prefWidth="227.0" text="Servicios " textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Button fx:id="rett" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="66.0" prefWidth="66.0" styleClass="res" stylesheets="@../css/empresas.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnNuevo" buttonType="RAISED" layoutX="1104.0" layoutY="134.0" onAction="#nuevo" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Nuevo" textFill="WHITE" />
+      <JFXButton fx:id="btnEditar" buttonType="RAISED" layoutX="1104.0" layoutY="187.0" onAction="#editar" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Editar" textFill="WHITE" />
+      <JFXButton fx:id="btnEliminar" buttonType="RAISED" layoutX="1104.0" layoutY="242.0" onAction="#eliminar" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Eliminar" textFill="WHITE" />
+      <JFXButton fx:id="btnReportar" buttonType="RAISED" layoutX="1104.0" layoutY="298.0" onAction="#generarReporte" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="reportar" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="124.0" prefHeight="36.0" prefWidth="132.0" text="Codigo Servicio" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="189.0" prefHeight="36.0" prefWidth="132.0" text="Fecha Servicio" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="252.0" prefHeight="36.0" prefWidth="132.0" text="Hora Servicio" textFill="WHITE" />
+      <Label layoutX="563.0" layoutY="124.0" prefHeight="36.0" prefWidth="132.0" text="Lugar Servicio " textFill="WHITE" />
+      <Label layoutX="563.0" layoutY="215.0" prefHeight="36.0" prefWidth="132.0" text="Telefono de Contacto" textFill="WHITE" />
+      <Label layoutX="563.0" layoutY="300.0" prefHeight="36.0" prefWidth="132.0" text="Empresa" textFill="WHITE" />
+      <JFXTextField fx:id="codigo" layoutX="144.0" layoutY="130.0" prefHeight="25.0" prefWidth="381.0" />
+      <JFXTextField fx:id="lugar" layoutX="682.0" layoutY="130.0" prefHeight="25.0" prefWidth="381.0" />
+      <JFXTextField fx:id="telefono" layoutX="682.0" layoutY="220.0" prefHeight="25.0" prefWidth="381.0" />
+      <ComboBox fx:id="comboboxEmpresa" layoutX="695.0" layoutY="306.0" prefHeight="25.0" prefWidth="381.0" stylesheets="@../css/empleados.css" />
+      <TableView fx:id="tblServicio" layoutX="22.0" layoutY="384.0" onMouseClicked="#seleccionarElementos" prefHeight="314.0" prefWidth="1233.0" stylesheets="@../css/empresas.css">
+        <columns>
+          <TableColumn fx:id="colCodigoServicios" prefWidth="75.0" text="Codigo" />
+          <TableColumn fx:id="colFechaServicios" prefWidth="172.0" text="Fecha" />
+            <TableColumn fx:id="colHoraServicios" prefWidth="172.0" text="Hora" />
+            <TableColumn fx:id="colLugarServicios" prefWidth="242.0" text="Lugar" />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="274.0" text="Telefono de Contacto" />
+            <TableColumn fx:id="colTipoServicios" minWidth="0.0" prefWidth="153.0" text="Tipo de Servicio" />
+            <TableColumn fx:id="colEmpresa" prefWidth="144.0" text="Empresa" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="320.0" prefHeight="36.0" prefWidth="132.0" text="Tipo Servicio" textFill="WHITE" />
+      <JFXTextField fx:id="tipoServicio" layoutX="138.0" layoutY="326.0" prefHeight="25.0" prefWidth="381.0" />
+      <JFXTextField fx:id="hora" layoutX="138.0" layoutY="258.0" prefHeight="25.0" prefWidth="381.0" />
+      <AnchorPane layoutX="25.0" layoutY="370.0" prefHeight="31.0" prefWidth="1251.0" style="-fx-background-color: #2653af; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="2.0" layoutY="4.0" text="Codigo" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="309.0" layoutY="4.0" text="Hora" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="722.0" layoutY="7.0" text="Telefono de contacto" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="953.0" layoutY="4.0" text="Tipo de Servicio" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="4.0" text="Fecha" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="525.0" layoutY="4.0" text="Lugar" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1120.0" layoutY="4.0" text="Empresa" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFechaS" layoutX="144.0" layoutY="192.0" prefHeight="30.0" prefWidth="381.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

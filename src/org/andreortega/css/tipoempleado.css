@@ -1,0 +1,59 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+        -fx-background-color:  transparent;
+       
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  #402980;
+    
+    -fx-opacity: 0.0;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+.table-view .column-header{
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color,  #402980;
+    -fx-border-color: #402980; 
+    -fx-table-cell-border-color: #402980;
+    -fx-border-color:  #291e4a;
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #402980;
+    -fx-border-color: #402980;  
+    -fx-table-cell-border-color: #402980;
+    -fx-border-color:  #291e4a;
+    
+}
+.table-row-cell:hover{
+    -fx-background-color:   #784ef5;
+    -fx-table-cell-border-color: #402980;    
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  #784ef5;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}

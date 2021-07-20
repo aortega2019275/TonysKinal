@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #112046;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andreortega.controller.EmpresasController">
+    <stylesheets>
+        <URL value="@/org/andreortega/css/empresas.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="codigo" focusColor="RED" labelFloat="true" layoutX="140.0" layoutY="111.0" prefHeight="25.0" prefWidth="651.0" styleClass="textfill" stylesheets="@../css/empresas.css" unFocusColor="WHITE" />
+      <Label layoutX="28.0" layoutY="111.0" prefHeight="25.0" prefWidth="100.0" text="Codigo Empresa" textFill="WHITE" />
+      <Label layoutX="28.0" layoutY="165.0" prefHeight="25.0" prefWidth="100.0" text="Nombre Empresa" textFill="WHITE" />
+      <Label layoutX="28.0" layoutY="221.0" prefHeight="25.0" prefWidth="100.0" text="Direccion Empresa" textFill="WHITE" />
+      <JFXTextField fx:id="nombre" focusColor="RED" labelFloat="true" layoutX="140.0" layoutY="165.0" prefHeight="25.0" prefWidth="651.0" styleClass="textfill" stylesheets="@../css/empresas.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="direccion" focusColor="RED" labelFloat="true" layoutX="140.0" layoutY="221.0" prefHeight="25.0" prefWidth="651.0" styleClass="textfill" stylesheets="@../css/empresas.css" unFocusColor="WHITE" />
+      <Label layoutX="28.0" layoutY="276.0" prefHeight="25.0" prefWidth="100.0" text="Télefono" textFill="WHITE" />
+      <JFXTextField fx:id="telefono" focusColor="RED" labelFloat="true" layoutX="140.0" layoutY="276.0" prefHeight="25.0" prefWidth="651.0" styleClass="textfill" stylesheets="@../css/empresas.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnNuevo" buttonType="RAISED" layoutX="853.0" layoutY="111.0" onAction="#nuevo" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Nuevo" textFill="WHITE" />
+      <JFXButton fx:id="btnEditar" layoutX="853.0" layoutY="165.0" onAction="#editarEmpresa" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Editar" textFill="WHITE" />
+      <JFXButton fx:id="btnEliminar" layoutX="853.0" layoutY="221.0" onAction="#eliminarEmpresa" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Eliminar" textFill="WHITE" />
+      <JFXButton fx:id="btnReportar" layoutX="853.0" layoutY="276.0" onAction="#generarReporte" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="reportar" textFill="WHITE" />
+      <AnchorPane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: #1a3656;">
+         <children>
+            <Label graphicTextGap="40.0" layoutX="975.0" prefHeight="75.0" prefWidth="237.0" style="-fx-background-color: #1a3656;" text="Empresas" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Button fx:id="rett" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="66.0" prefWidth="66.0" styleClass="res" stylesheets="@../css/empresas.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="54.0" fitWidth="56.0" layoutX="1212.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-menú-principal-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblEmpresa" editable="true" layoutX="20.0" layoutY="374.0" onKeyPressed="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="333.0" prefWidth="1241.0" stylesheets="@../css/empresas.css">
+        <columns>
+          <TableColumn fx:id="colcodigoEmpresa" prefWidth="126.0" text="Codigo Empresa" />
+          <TableColumn fx:id="colnombreEmpresa" prefWidth="589.0" text="Nombre Empresa" />
+            <TableColumn fx:id="coldireccionEmpresa" prefWidth="381.0" text="Direccion Empresa" />
+            <TableColumn fx:id="coltelefonoEmpresa" prefWidth="144.0" text="Télefono" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="20.0" layoutY="359.0" prefHeight="31.0" prefWidth="1241.0" style="-fx-background-color: #2653af;">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" text="Codigo Empresa" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="370.0" layoutY="4.0" text="Nombre Empresa" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="844.0" layoutY="4.0" text="Dirección Empresa" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1102.0" layoutY="4.0" text="Telefono Empresa" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

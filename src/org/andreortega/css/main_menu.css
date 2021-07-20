@@ -1,0 +1,60 @@
+
+#rootPane {
+
+    
+}
+.button{
+    -fx-background-color:  transparent;
+    -fx-background-radius: 0 30 30 0;
+    -fx-background-size: contain;
+}
+.button:hover{
+    -fx-background-color:  #2653af;
+    -fx-background-radius: 0 30 30 0;
+    -fx-background-size: contain;
+}
+.barra{
+    -fx-background-image: url(/org/andreortega/img/firmarP.png);
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+}
+.barra:hover{
+    -fx-background-image: url(/org/andreortega/img/firmar_1.png);
+    -fx-background-color: transparent;
+    
+}
+.menos{
+    -fx-background-image: url(/org/andreortega/img/mini.png);
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+  
+}
+.menos:hover{
+    -fx-background-image: url(/org/andreortega/img/espalda.png);
+    -fx-background-color: transparent;
+    
+}
+
+.maxi{
+    -fx-background-image: url(/org/andreortega/img/usuario2.png);
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+}
+.maxi:hover{
+    -fx-background-image: url(/org/andreortega/img/usuario.png);
+    -fx-background-color: transparent;
+    
+}
+
+.button1{
+    -fx-background-color:   #1a3656;
+    -fx-background-radius: 30 0 0 30;
+    -fx-background-size: contain;
+}
+.button1:hover{
+    -fx-background-color:  #2653af;
+    -fx-background-radius: 30 0 0 30;
+    -fx-background-size: contain;
+}
+
+

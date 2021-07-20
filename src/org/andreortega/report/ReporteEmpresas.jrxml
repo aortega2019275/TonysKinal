@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte empresa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a989a951-bc52-4734-b4a7-ec256f8d5ff3">
+	<property name="ireport.zoom" value="2.1435888100000056"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="19"/>
+	<parameter name="log" class="java.io.InputStream"/>
+	<parameter name="bot" class="java.io.InputStream"/>
+	<parameter name="top" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[call sp_listarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752">
+			<image scaleImage="FillFrame">
+				<reportElement x="-23" y="592" width="613" height="160" uuid="af47346b-47c6-4737-90dd-4563b37dc8ef"/>
+				<imageExpression><![CDATA[$P{bot}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="-23" y="-22" width="623" height="200" uuid="b963b2d7-b805-44a9-ac39-d6572b348e59"/>
+				<imageExpression><![CDATA[$P{top}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<elementGroup/>
+			<image>
+				<reportElement x="0" y="0" width="123" height="79" uuid="54ae1fb6-d2f4-4e26-a660-d691c3cd4162"/>
+				<imageExpression><![CDATA[$P{log}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="164" y="8" width="265" height="33" uuid="febe6dc9-b34f-4d96-a06c-57bc5a185ec9"/>
+				<textElement>
+					<font fontName="Century" size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-8" y="0" width="108" height="30" forecolor="#FFFFFF" uuid="784617c8-94de-4a5f-b83f-8aaf5a942336"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Tonys Kinal]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="-17" y="13" width="607" height="25" forecolor="#000000" backcolor="#000066" uuid="c1d85aa4-66ce-41fb-9224-c9d5dfbc085e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="13" width="59" height="31" forecolor="#FFFFFF" uuid="89e2c1f6-adb4-42aa-9398-9f1b32a9e008"/>
+				<textElement>
+					<font fontName="MV Boli" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="13" width="128" height="31" forecolor="#FFFFFF" uuid="4488e034-c3fc-4104-88e2-55fdb87631b2"/>
+				<textElement>
+					<font fontName="MV Boli" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="13" width="205" height="31" forecolor="#FFFFFF" uuid="63d202cc-355e-4525-9f6f-90e3e71b8458"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="13" width="100" height="31" forecolor="#FFFFFF" uuid="e42fbb54-11f8-4cc0-bdbc-d6d64e9a66d0"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="39" width="572" height="1" uuid="fa040185-94d6-46d0-a979-955338ff6676"/>
+			</line>
+			<textField>
+				<reportElement mode="Opaque" x="14" y="11" width="59" height="20" uuid="04a80ef9-b0ac-4f1e-a87d-e54f9312e429"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="11" width="128" height="20" uuid="82bfec36-1508-49e5-b78d-74d5e8e3e154"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="11" width="205" height="20" uuid="226a889f-4e09-4d28-8564-742c172c0c54"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="11" width="100" height="20" uuid="119d079e-dc3c-41ba-9be0-50e00745669a"/>
+				<textElement textAlignment="Center">
+					<font fontName="MV Boli"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="472" y="96" width="100" height="20" forecolor="#FFFFFF" uuid="7e9a1dc0-1b4f-4152-b343-44ee2cc03412"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gerente General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="76" width="85" height="20" forecolor="#FFFFFF" uuid="c210f9e3-46fa-4f6e-92b6-f2966cf1208e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Andre Ortega ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

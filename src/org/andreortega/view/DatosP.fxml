@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1229.0" style="-fx-background-color: #e4f5ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andreortega.controller.LoginController">
+   <children>
+      <AnchorPane layoutY="-4.0" prefHeight="641.0" prefWidth="355.0" style="-fx-background-color: #094f6e;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="131.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="231.0" layoutX="124.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/R.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnrerutn" buttonType="RAISED" layoutY="572.0" onAction="#mainMenu" prefHeight="58.0" prefWidth="292.0" ripplerFill="WHITE" style="-fx-background-color: #1F1F1F;" text="RETURN" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="292.0" layoutY="65.0" prefHeight="78.0" prefWidth="937.0" style="-fx-background-color: #2d7a9c; -fx-background-radius: 0 50 50 0;">
+         <children>
+            <Label layoutX="46.0" prefHeight="78.0" prefWidth="542.0" text="DATOS PROGRAMADOR ">
+               <font>
+                  <Font name="Felix Titling" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="262.0" prefHeight="78.0" prefWidth="698.0" style="-fx-background-color: #2d7a9c; -fx-background-radius: 0 0 50 0;">
+         <children>
+            <Label layoutX="46.0" prefHeight="78.0" prefWidth="667.0" text="ANDRE JAVIER ORTEGA GARCIA">
+               <font>
+                  <Font name="Felix Titling" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="351.0" prefHeight="78.0" prefWidth="646.0" style="-fx-background-color: #022534; -fx-background-radius: 0 0 50 0;">
+         <children>
+            <Label layoutX="46.0" prefHeight="78.0" prefWidth="542.0" text="IN5BV - PE5BV" textFill="WHITE">
+               <font>
+                  <Font name="Felix Titling" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="442.0" prefHeight="78.0" prefWidth="582.0" style="-fx-background-color: #2d7a9c; -fx-background-radius: 0 0 50 0;">
+         <children>
+            <Label layoutX="46.0" prefHeight="78.0" prefWidth="542.0" style="-fx-background-radius: 0 0 50 0;" text="2019275">
+               <font>
+                  <Font name="Felix Titling" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="292.0" layoutY="531.0" prefHeight="78.0" prefWidth="542.0" style="-fx-background-color: #022534; -fx-background-radius: 0 0 50 0;">
+         <children>
+            <Label layoutX="46.0" prefHeight="78.0" prefWidth="542.0" text="TEL. FIC 20192582" textFill="WHITE">
+               <font>
+                  <Font name="Felix Titling" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="948.0" prefHeight="58.0" prefWidth="253.0">
+         <children>
+            <JFXButton fx:id="min" buttonType="RAISED" layoutX="204.0" layoutY="8.0" onAction="#minimi" prefHeight="27.0" prefWidth="27.0" style="-fx-background-radius: 100;" styleClass="menos" stylesheets="@../css/main_menu.css" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Button fx:id="exi" layoutX="240.0" layoutY="8.0" mnemonicParsing="false" onAction="#exitp" prefHeight="27.0" prefWidth="27.0" style="-fx-background-radius: 100;" styleClass="barra" stylesheets="@../css/main_menu.css" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

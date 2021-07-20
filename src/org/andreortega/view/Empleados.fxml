@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #112046;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andreortega.controller.EmpleadosController">
+    <stylesheets>
+        <URL value="@/org/andreortega/css/empleados.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: #1a3656;">
+         <children>
+            <Button fx:id="rett" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="66.0" prefWidth="66.0" styleClass="res" stylesheets="@../css/empresas.css" text="Button">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Label graphicTextGap="40.0" layoutX="935.0" prefHeight="75.0" prefWidth="272.0" style="-fx-background-color: #1a3656;" text="Empleados" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="66.0" layoutX="1207.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-antecedentes-grupo-seleccionado-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="21.0" layoutY="114.0" prefHeight="36.0" prefWidth="132.0" text="Codigo Empleado" textFill="WHITE" />
+      <Label layoutX="21.0" layoutY="168.0" prefHeight="36.0" prefWidth="132.0" text="Numero Empleado" textFill="WHITE" />
+      <Label layoutX="21.0" layoutY="222.0" prefHeight="36.0" prefWidth="132.0" text="Apellidos Empleado" textFill="WHITE" />
+      <Label layoutX="21.0" layoutY="278.0" prefHeight="36.0" prefWidth="132.0" text="Nombres Empleado" textFill="WHITE" />
+      <Label layoutX="552.0" layoutY="113.0" prefHeight="36.0" prefWidth="132.0" text="Dirección Empleado" textFill="WHITE" />
+      <Label layoutX="552.0" layoutY="167.0" prefHeight="36.0" prefWidth="132.0" text="Telefono Contacto" textFill="WHITE" />
+      <Label layoutX="552.0" layoutY="222.0" prefHeight="36.0" prefWidth="132.0" text="Grado Cocinero" textFill="WHITE" />
+      <Label layoutX="552.0" layoutY="277.0" prefHeight="36.0" prefWidth="132.0" text="Tipo Empleado" textFill="WHITE" />
+      <JFXTextField fx:id="codigo" focusColor="RED" layoutX="141.0" layoutY="120.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="numeros" focusColor="RED" layoutX="141.0" layoutY="172.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="apellidos" focusColor="RED" layoutX="141.0" layoutY="227.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="nombres" focusColor="RED" layoutX="141.0" layoutY="283.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="direccion" focusColor="RED" layoutX="671.0" layoutY="119.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="telefono" focusColor="RED" layoutX="671.0" layoutY="172.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="grado" focusColor="RED" layoutX="671.0" layoutY="227.0" prefHeight="25.0" prefWidth="390.0" styleClass="textfill" stylesheets="@../css/empleados.css" unFocusColor="WHITE" />
+      <JFXButton fx:id="btnNuevo" buttonType="RAISED" layoutX="1094.0" layoutY="124.0" onAction="#nuevo" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Nuevo" textFill="WHITE" />
+      <JFXButton fx:id="btnEditar" buttonType="RAISED" layoutX="1094.0" layoutY="177.0" onAction="#editar" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Editar" textFill="WHITE" />
+      <JFXButton fx:id="btnEliminar" buttonType="RAISED" layoutX="1094.0" layoutY="232.0" onAction="#eliminar" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="Eliminar" textFill="WHITE" />
+      <JFXButton fx:id="btnReportar" buttonType="RAISED" layoutX="1094.0" layoutY="288.0" prefHeight="40.0" prefWidth="159.0" ripplerFill="RED" style="-fx-background-color: #2653af;" text="reportar" textFill="WHITE" />
+      <TableView fx:id="tblEmpleado" accessibleRole="IMAGE_VIEW" layoutX="18.0" layoutY="368.0" onMouseClicked="#seleccionarElementos" prefHeight="338.0" prefWidth="1245.0" stylesheets="@../css/empresas.css">
+        <columns>
+          <TableColumn fx:id="colCodigoempleado" prefWidth="50.0" text="Codigo " />
+          <TableColumn fx:id="colNumeroempleado" prefWidth="100.0" text="Numero" />
+            <TableColumn fx:id="colApellidosempleado" prefWidth="300.0" text="Apellidos" />
+            <TableColumn fx:id="colNombreempleado" prefWidth="300.0" text="Nombres" />
+            <TableColumn fx:id="colDireccionempleado" prefWidth="200.0" text="Dirección" />
+            <TableColumn fx:id="coltelefonoempleado" minWidth="0.0" prefWidth="100.0" text="Telefono" />
+            <TableColumn fx:id="colGradococinero" prefWidth="100.0" text="Grado" />
+            <TableColumn fx:id="colTipoempleado" prefWidth="90.0" text="Tipo " />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="15.0" layoutY="360.0" prefHeight="31.0" prefWidth="1251.0" style="-fx-background-color: #2653af; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="2.0" layoutY="4.0" text="Codigo" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="267.0" layoutY="4.0" text="Apellidos" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="813.0" layoutY="4.0" text="Dirección" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="965.0" layoutY="4.0" text="Telefono" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="4.0" text="Numero" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="4.0" text="Nombres" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1079.0" layoutY="4.0" text="Grado" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="1174.0" layoutY="4.0" text="Tipo" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnTipoEmp" contentDisplay="GRAPHIC_ONLY" layoutX="908.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnTipoEmp" prefHeight="36.0" prefWidth="41.0" styleClass="tipoemp" stylesheets="@../css/empleados.css" text="Button" />
+      <ComboBox fx:id="comboBox" layoutX="671.0" layoutY="280.0" prefHeight="31.0" prefWidth="218.0" stylesheets="@../css/empleados.css" />
+   </children>
+</AnchorPane>
